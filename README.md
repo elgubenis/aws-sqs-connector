@@ -1,6 +1,6 @@
 # AWS SQS Connector
 
-Tired of all the hassles connecting and polling a Amazon WebService SQS? The solutions is here!
+Tired of all the hassles connecting and polling a Amazon WebService SQS? The solution is here!
 
 Install
 -

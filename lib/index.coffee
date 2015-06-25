@@ -19,18 +19,15 @@ class SQSConnector
       if data.Messages and data.Messages.length > 0
         message = data.Messages[0]
         done = (err2) =>
+          if err2
+            console.error err2
           if !err2 or String(err2).indexOf(404) > -1
-            console.info 'deleting message'
-            if err2
-              console.error err2
             @sqs.deleteMessage
               QueueUrl: @options.queueUrl
               ReceiptHandle: message.ReceiptHandle
             , (err) =>
-              console.log 'message deleted'
               @receive(cb)
           else
-            console.error err2
             @receive(cb)
         returnMessage =
           Id: message.MessageId
