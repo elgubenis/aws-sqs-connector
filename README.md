@@ -35,13 +35,13 @@ Poll Queue
 With CoffeeScript
 ```coffee
 # Everytime there is a new message, this callback gets executed
-Queue.receive (message, attributes, fetchNext) ->
+Queue.receive (message, fetchNext) ->
 
   # log message
   console.log message
 
   # log attributes
-  console.log attributes
+  console.log message.attributes
 
   # do some processing with the message and then fetch the next message
   fetchNext()
@@ -50,9 +50,9 @@ Queue.receive (message, attributes, fetchNext) ->
 
 With JavaScript
 ```js
-Queue.receive(function(message, attributes, fetchNext) {
+Queue.receive(function(message, fetchNext) {
   console.log(message);
-  console.log(attributes);
+  console.log(messages.attributes);
   fetchNext();
 });
 ```
