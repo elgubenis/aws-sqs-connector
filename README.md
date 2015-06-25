@@ -19,6 +19,7 @@ Queue = new SQSConnector
   queueUrl: 'http://sqs.<REGION>.amazonaws.com/<NUMBER>/queue-name'
 ```
 
+
 With JavaScript
 ```js
 var SQSConnector = require('aws-sqs-connector');
@@ -46,6 +47,7 @@ Queue.receive (message, attributes, fetchNext) ->
   fetchNext()
 ```
 
+
 With JavaScript
 ```js
 Queue.receive(function(message, attributes, fetchNext) {
@@ -69,10 +71,23 @@ Queue.send 'message body', { responseRequired: true, randomNumber: 1 }, (err, re
   console.log response
 ```
 
+
 With JavaScript
 ```js
 Queue.send('message body', { responseRequired: true, randomNumber: 1 }, function(err, response) {
   if (err) { console.error(err); }
   console.log(response);
 });
+```
+
+Options
+---
+- Credentials:
+The credentials json should be of the following format:
+```json
+{
+  "accessKeyId": "YOUR_ACCESS_KEY_ID",
+  "secretAccessKey": "YOUR_SECRET_ACCESS_KEY",
+  "region": "YOUR_REGION"
+}
 ```
