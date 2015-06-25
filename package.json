@@ -1,0 +1,22 @@
+{
+  "name": "aws-sqs-connector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://elgubenis@github.com/elgubenis/aws-sqs-connector.git"
+  },
+  "author": "Linus Gubenis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elgubenis/aws-sqs-connector/issues"
+  },
+  "homepage": "https://github.com/elgubenis/aws-sqs-connector#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1.36"
+  }
+}
