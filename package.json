@@ -4,7 +4,7 @@
   "description": "Amazon WebService SQS Connector",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/elgubenis/aws-sqs-connector#readme",
   "dependencies": {
-    "aws-sdk": "^2.1.36"
+    "aws-sdk": "^2.1.36",
+    "coffee-script": "^1.9.3"
   }
 }
