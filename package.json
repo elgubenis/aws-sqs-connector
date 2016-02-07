@@ -1,6 +1,6 @@
 {
   "name": "aws-sqs-connector",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Amazon WebService SQS Connector",
   "main": "index.js",
   "scripts": {

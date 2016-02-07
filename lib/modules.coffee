@@ -11,7 +11,7 @@ exports.constructor = (options) ->
 exports.receive = (cb) ->
   @sqs.receiveMessage
     QueueUrl: @options.queueUrl
-    MaxNumberOfMessages: 1
+    MaxNumberOfMessages: 10
     VisibilityTimeout: 60
     WaitTimeSeconds: 0
     MessageAttributeNames: ['All']
@@ -35,8 +35,8 @@ exports.receive = (cb) ->
           Body: message.Body
           Attributes: utils.getAllAttributes(message)
           ReceiptHandle: message.ReceiptHandle
-        return cb returnMessage, done
-      @receive(cb)
+        cb returnMessage, done
+    @receive(cb)
 
 exports.send = (body, attributes, cb) ->
 
